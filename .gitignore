@@ -1,2 +1,4 @@
 .mcp.json
 *.pyc
+.claude/skills/tuitui-bot/scripts/.env
+.claude/skills/tuitui-bot/tmp/*
