@@ -160,7 +160,7 @@ uv run --env-file scripts/.env scripts/fetch_history.py \
   --start 20260403
 ```
 
-**输出：** 消息自动保存到 skill 目录下的 `tmp/` 文件夹，文件名格式：
+**输出：** 消息自动保存到项目根目录的 `.tmp/` 文件夹，文件名格式：
 ```
 <start_YYYYMMDD-HHMM>_<end_YYYYMMDD-HHMM>-<群ID或账号>.md
 例：20260403-0000_20260403-2359-7652669649100000.md
@@ -171,7 +171,7 @@ uv run --env-file scripts/.env scripts/fetch_history.py \
 1. **识别目标**：群组（名称→查映射表，或用户直接提供 ID）或单聊（域账号）
 2. **确定时间范围**："今天"→ 当天日期，"最近7天"→ 从今天往前数7天
 3. **运行脚本**：使用上方绝对路径格式执行脚本，等待脚本完成并输出文件路径
-4. **读取文件**：读取 `tmp/` 下生成的 `.md` 文件内容
+4. **读取文件**：读取 `.tmp/` 下生成的 `.md` 文件内容
 5. **汇总**：对消息内容进行分析汇总，提炼关键信息、讨论主题、决策事项等呈现给用户
 
 ### 注意事项
@@ -180,5 +180,5 @@ uv run --env-file scripts/.env scripts/fetch_history.py \
 - 脚本和 .env 文件的**绝对路径**：
   - 脚本目录：`/home/zhulingqi/repo/bot/.claude/skills/tuitui-bot/scripts/`
   - .env 文件：`/home/zhulingqi/repo/bot/.claude/skills/tuitui-bot/scripts/.env`
-  - tmp 目录：`/home/zhulingqi/repo/bot/.claude/skills/tuitui-bot/tmp/`
+  - tmp 目录：`/home/zhulingqi/repo/bot/.tmp/`
 - 如果消息量很大（上千条），汇总时重点关注关键决策、问题和结论，不必逐条列出

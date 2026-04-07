@@ -229,7 +229,7 @@ def main():
         output_dir = args.output_dir
     else:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        output_dir = os.path.normpath(os.path.join(script_dir, "..", "tmp"))
+        output_dir = os.path.normpath(os.path.join(script_dir, "..", "..", "..", "..", ".tmp"))
 
     if args.group:
         target_id = args.group
